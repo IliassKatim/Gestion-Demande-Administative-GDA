@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme de Demandes Administratives | Maroc</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #9E6D4E; 
+            --secondary: #D4A373; 
+            --accent: #05570f; 
+            --dark: #3A2D1F; 
+            --light: #F8F1E5;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+        .navbar {
+            background-color: rgb(249, 245, 245);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('uploads/Livret.png') no-repeat center;
+            background-size: cover;
+            color: white;
+        }
+        .btn-primary {
+            background-color: var(--accent);
+            border: none;
+            padding: 10px 25px;
+            font-weight: 600;
+
+        }
+        .btn-primary:hover {
+            background-color: #8B0000; 
+        }
+        .btn-outline-primary {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+        .btn-outline-primary:hover {
+            background-color: var(--accent);
+            color: white;
+        }
+        .service-card {
+            background: white;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .service-icon {
+            color: var(--accent);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .how-it-works .step {
+            background: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .how-it-works .step i {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+        footer {
+            background-color: rgb(2, 74, 2);
+            color: white;
+        }
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="uploads/Untitled-2.png" alt="Demandes Administratives" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">Comment ça marche</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="status_demande.php">Suivi votre demande</a></li>
+                    <li class="nav-item ms-3">
+                        <a href="login.php" class="btn btn-outline-primary">Connexion</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a href="register.php" class="btn btn-success">S'inscrire</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="hero-section py-5">
+        <div class="container py-5 text-center">
+            <h1 class="display-5 fw-bold mb-4">Vos démarches administratives simplifiées</h1>
+            <p class="lead mb-4">Obtenez vos documents officiels sans vous déplacer, partout au Maroc.</p>
+            <a href="register.php" class="btn btn-primary btn-lg px-4 me-2 ">Commencer maintenant</a>
+            <a href="#services" class="btn btn-outline-light btn-lg px-4">Nos services</a>
+        </div>
+    </section>
+
+   
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Nos Services</h2>
+                <p class="lead text-muted">Toutes vos demandes administratives en un seul endroit</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card service-card h-100 p-4">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h4>Extrait de Naissance</h4>
+                            <p class="text-muted">Demandez votre extrait de naissance en ligne en quelques minutes.</p>
+                            <a href="demande_naissance.php" class="btn btn-sm btn-outline-primary mt-3">Demander</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100 p-4">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4>Certificat de Résidence</h4>
+                            <p class="text-muted">Obtenez votre certificat de résidence sans vous déplacer.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary mt-3">Demander</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100 p-4">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>Acte de Mariage</h4>
+                            <p class="text-muted">Demande de copie intégrale d'acte de mariage simplifiée.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary mt-3">Demander</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="how-it-works" class="py-5 bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Comment ça marche ?</h2>
+                <p class="lead text-muted">3 étapes simples pour obtenir vos documents</p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="step">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h5>1. Inscription</h5>
+                    <p class="text-muted">Créez votre compte en 2 minutes</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="step">
+                        <i class="fas fa-file-upload"></i>
+                    </div>
+                    <h5>2. Demande</h5>
+                    <p class="text-muted">Remplissez le formulaire en ligne</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="step">
+                        <i class="fas fa-file-download"></i>
+                    </div>
+                    <h5>3. Réception</h5>
+                    <p class="text-muted">Recevez votre document par email</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5" style="background-color: rgb(242, 234, 204); color: rgb(0, 0, 0);">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3">
+                    <h3 class="fw-bold">15K+</h3>
+                    <p>Citoyens servis</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="fw-bold">24h</h3>
+                    <p>Temps moyen</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="fw-bold">60+</h3>
+                    <p>Communes</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="fw-bold">98%</h3>
+                    <p>Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <img src="uploads/Coat_of_arms_of_Morocco.png" alt="Logo" height="150">
+                    
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#services">Services</a></li>
+                        <li class="mb-2"><a href="#how-it-works">Comment ça marche</a></li>
+                        <li class="mb-2"><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-phone me-2"></i> +212 5 20 20 20 20</p>
+                    <p><i class="fas fa-envelope me-2"></i> contact@demandes.ma</p>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p class="mb-0">© 2025 Plateforme de Demandes Administratives. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
