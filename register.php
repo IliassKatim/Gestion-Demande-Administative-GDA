@@ -36,8 +36,8 @@ if (isset($_POST['register'])) {
             $mail->SMTPSecure = 'tls';
             
             
-            $mail->Username = 'nonoilyass2021@gmail.com';
-            $mail->Password = 'plwc lhcu pyrp shei';
+            $mail->Username = 'your own email or gmail';
+            $mail->Password = 'your own password';
 
             $mail->setFrom('nonoilyass2021@gmail.com', 'Admin');
             $mail->addAddress($email);
